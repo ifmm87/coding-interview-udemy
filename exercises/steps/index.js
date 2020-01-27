@@ -37,6 +37,7 @@ if( n === stair.length) {
   console.log(stair);
   return steps(n, row + 1);
 }
+//adionamos
 const add = stair.length <= row ? '#' : ' ';
 steps(n, row, stair + add);
 }
