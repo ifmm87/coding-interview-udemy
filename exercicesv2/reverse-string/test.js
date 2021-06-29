@@ -1,20 +1,13 @@
-const anagrams = require('./solution.js');
-test('anagrams function exist?', () => {
-  expect(typeof anagrams.anagram).toEqual('function');
+const reverse = require("./reverse");
+
+test("verifying if reverse is a function ", () => {
+  expect(typeof reverse).toEqual("function");
 });
 
-test ('"ivan" is an anagram of navin', () =>{
-  expect(anagrams.anagram('ivan', 'navi')).toBeTruthy();
+test('reverse of "abc" must be "cba"', () => {
+  expect(reverse("abc")).toEqual("cba");
 });
 
-test('"abc" is not an anagram of "jok"', () =>{
-  expect(anagrams.anagram('abc','jok')).toBeFalsy();
+test('reverse of "abc" is not "cssba"', () => {
+  expect(reverse("abc")).not.toBe("cssba");
 });
-
-test('"ivanmujica" is anagram of "mjicadivan"', () => {
-  expect(anagrams.anagram2('ivanmujica', 'mujicaivan')).toBeTruthy();
-})
-
-test('"ever" is not anagram of "redo"', () =>{
-  expect(anagrams.anagram2('ever', 'redo')).toBeFalsy();
-})

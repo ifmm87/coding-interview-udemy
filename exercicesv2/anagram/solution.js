@@ -20,7 +20,7 @@ const anagram2 = (stringA, stringB) => {
   const oStringB = countChars(stringB);
   if (Object.keys(countChars(stringA)).length !== Object.keys(countChars(stringB)).length)
       return false;
-  // console.log(oStringA, oStringB);
+  console.log(oStringA, oStringB);
   for(let key in oStringA ) {
       if (oStringA[key] !== oStringB[key])
         return false;
